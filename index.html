@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Detox</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1 class="title">Digital Detox</h1>
+
+  <div class="dashboard">
+
+    <!-- TOKENS BOX -->
+    <div class="card highlight">
+      <h2>Tokens Left</h2>
+      <p class="big" id="tokensLeft">0</p>
+    </div>
+
+    <!-- TODAY -->
+    <div class="card">
+      <h3>Today’s Screen Time</h3>
+      <p id="todayTime">0h 00m</p>
+    </div>
+
+    <!-- WEEKLY -->
+    <div class="card">
+      <h3>Weekly Average</h3>
+      <p id="weeklyAvg">0h 00m</p>
+    </div>
+
+    <!-- TARGET -->
+    <div class="card">
+      <h3>Daily Target</h3>
+      <p id="targetText">0h 00m</p>
+    </div>
+
+    <!-- PIE CHART -->
+    <div class="card wide">
+      <h3>Token Usage</h3>
+      <canvas id="tokenChart"></canvas>
+    </div>
+
+    <!-- REDUCTION -->
+    <div class="card wide">
+      <h3>Reduction Progress</h3>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="reductionText"></p>
+    </div>
+
+    <!-- TARGET SLIDER -->
+    <div class="card wide">
+      <h3>Set Daily Target</h3>
+      <input type="range" min="60" max="360" step="15" id="targetSlider">
+      <p id="sliderValue"></p>
+    </div>
+
+    <!-- ACTION -->
+    <div class="card wide center">
+      <button onclick="usePhone()">Use Phone (10 min)</button>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
